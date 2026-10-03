@@ -657,8 +657,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: var(--transition);
 }
 .operadora-logo img {
-  max-width: 80%;
-  max-height: 50px;
+  max-width: 90%;
+  max-height: 70px;
   object-fit: contain;
 }
 .operadora-card:hover .operadora-logo { transform: scale(1.06); }
@@ -1492,25 +1492,39 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .contato-card p { font-size: 0.78rem; }
   .contato-card-cta { font-size: 0.8rem; }
 
-  /* Botões flutuantes — menores e sem tooltip no mobile */
+  /* =========================================================
+     BOTÕES FLUTUANTES — no mobile vão para o canto ESQUERDO
+     ========================================================= */
   .social-float {
-    bottom: 16px;
-    right: 14px;
+    bottom: 20px;
+    left: 14px;
+    right: auto;         /* remove o alinhamento à direita */
     gap: 10px;
   }
   .float-btn {
-    width: 44px;
-    height: 44px;
-    font-size: 1.15rem;
+    width: 46px;
+    height: 46px;
+    font-size: 1.25rem;
+  }
+  .float-btn:hover {
+    transform: translateY(-3px) scale(1.08);  /* hover mais discreto no mobile */
   }
   .float-tooltip {
-    display: none;
+    display: none;        /* tooltip não faz sentido no mobile */
   }
+
+  /* Botão "voltar ao topo" — vai para o canto DIREITO no mobile */
   .back-top {
-    width: 40px;
-    height: 40px;
-    bottom: 16px;
-    left: 14px;
+    width: 42px;
+    height: 42px;
+    bottom: 20px;
+    left: auto;
+    right: 14px;
+  }
+
+  /* Espaço extra no fim do body para o conteúdo não encostar nos botões */
+  body {
+    padding-bottom: 90px;
   }
 
   /* FAQ — responsivo mobile pequeno */
