@@ -515,8 +515,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .sobre-text strong { color: var(--primary); }
 
+/* ✅ LISTA COM MAIS ESPAÇO ABAIXO */
 .sobre-list {
-  margin: 24px 0 32px;
+  margin: 24px 0 48px;   /* era 32px, agora 48px */
   display: grid;
   gap: 12px;
 }
@@ -530,6 +531,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sobre-list i {
   color: var(--primary);
   font-size: 1.1rem;
+}
+
+/* ✅ BOTÃO EM LINHA PRÓPRIA — não invade mais a lista */
+.sobre-text .btn {
+  display: inline-flex;
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
 }
 
 /* =========================================================
@@ -1492,13 +1501,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .contato-card p { font-size: 0.78rem; }
   .contato-card-cta { font-size: 0.8rem; }
 
-  /* =========================================================
-     BOTÕES FLUTUANTES — no mobile vão para o canto ESQUERDO
-     ========================================================= */
+  /* ✅ Botões flutuantes — voltam para o canto DIREITO no mobile */
   .social-float {
     bottom: 20px;
-    left: 14px;
-    right: auto;         /* remove o alinhamento à direita */
+    right: 14px;
+    left: auto;
     gap: 10px;
   }
   .float-btn {
@@ -1507,24 +1514,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     font-size: 1.25rem;
   }
   .float-btn:hover {
-    transform: translateY(-3px) scale(1.08);  /* hover mais discreto no mobile */
+    transform: translateY(-3px) scale(1.08);
   }
   .float-tooltip {
-    display: none;        /* tooltip não faz sentido no mobile */
+    display: none;
   }
 
-  /* Botão "voltar ao topo" — vai para o canto DIREITO no mobile */
+  /* ✅ Botão "voltar ao topo" — volta para o canto ESQUERDO no mobile */
   .back-top {
     width: 42px;
     height: 42px;
     bottom: 20px;
-    left: auto;
-    right: 14px;
+    left: 14px;
+    right: auto;
   }
 
-  /* Espaço extra no fim do body para o conteúdo não encostar nos botões */
-  body {
-    padding-bottom: 90px;
+  /* ✅ Empurra o botão "Falar com a Corretora" para cima */
+  .sobre-text .btn {
+    margin-bottom: 40px;
   }
 
   /* FAQ — responsivo mobile pequeno */
