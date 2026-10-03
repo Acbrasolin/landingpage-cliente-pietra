@@ -3,8 +3,6 @@
 <head>
   <!-- =========================================================
        METAS BÁSICAS
-       charset garante acentuação correta.
-       viewport garante responsividade em celulares.
   ========================================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,51 +10,37 @@
 
   <!-- =========================================================
        SEO PRINCIPAL — TITLE
-       É o texto azul que aparece no Google. Máx ideal: 60 caracteres.
-       Palavra-chave principal no começo ("Corretora de Planos de Saúde em SP").
   ========================================================= -->
   <title>Corretora de Planos de Saúde em SP | Pietra Castello Brasolin</title>
 
   <!-- =========================================================
        SEO PRINCIPAL — META DESCRIPTION
-       Texto cinza que aparece no Google abaixo do título.
-       Máx ideal: 160 caracteres.
-       Inclui palavras-chave, operadoras e call-to-action ("cotação gratuita").
   ========================================================= -->
-  <meta name="description" content="Corretora de planos de saúde em São Paulo. Planos individuais, familiares e empresariais com Hapvida, NotreDame, Amil, SulAmérica, Bradesco e Unimed. Cotação gratuita!" />
+  <meta name="description" content="Corretora de planos de saúde em São Paulo. Planos individuais, familiares e empresariais com Bradesco, SulAmérica, Amil, NotreDame, Hapvida, Unimed, Omint, Care Plus, Porto Saúde e mais. Cotação gratuita!" />
 
   <!-- =========================================================
        SEO — PALAVRAS-CHAVE SECUNDÁRIAS
-       (pouco peso hoje, mas não atrapalha)
   ========================================================= -->
-  <meta name="keywords" content="corretora de planos de saúde, plano de saúde São Paulo, plano de saúde individual, plano de saúde familiar, plano de saúde empresarial, Hapvida, NotreDame, Amil, SulAmérica, Bradesco Saúde, Unimed" />
+  <meta name="keywords" content="corretora de planos de saúde, plano de saúde São Paulo, plano de saúde individual, plano de saúde familiar, plano de saúde empresarial, Bradesco Saúde, SulAmérica, Amil, NotreDame Intermédica, Hapvida, Unimed, Omint, Care Plus, Porto Saúde, São Cristóvão Saúde, Prevent Senior, Alice Saúde, Sami Saúde, CUIDAR.ME" />
 
   <!-- =========================================================
        SEO — AUTOR E INDEXAÇÃO
-       author = quem produziu o conteúdo.
-       robots = permite indexação e exibe snippets (rich results).
   ========================================================= -->
   <meta name="author" content="Pietra Castello Brasolin" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <!-- =========================================================
        SEO — CANONICAL
-       Informa ao Google qual é a URL "oficial" da página.
-       Evita problema de conteúdo duplicado.
-       ⚠️ Deixe com o domínio final (pietrabrasolin.com.br).
-       Quando você migrar o Vercel, o Google vai redirecionar automaticamente.
   ========================================================= -->
   <link rel="canonical" href="https://www.pietrabrasolin.com.br/" />
 
   <!-- =========================================================
        GOOGLE SEARCH CONSOLE — VERIFICAÇÃO
-       Prova que o site é seu. Não remover.
   ========================================================= -->
   <meta name="google-site-verification" content="Bf2ejyOPigHtkQplKNEu5atvRor51Tu3UY6ME_SQdag" />
 
   <!-- =========================================================
-       OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
-       Controla como o link aparece quando alguém compartilha.
+       OPEN GRAPH
   ========================================================= -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Pietra Castello Brasolin" />
@@ -70,7 +54,7 @@
   <meta property="og:locale" content="pt_BR" />
 
   <!-- =========================================================
-       TWITTER CARD (usado também por outros apps)
+       TWITTER CARD
   ========================================================= -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Corretora de Planos de Saúde em SP | Pietra Castello Brasolin" />
@@ -79,7 +63,6 @@
 
   <!-- =========================================================
        SEO LOCAL (São Paulo)
-       Ajuda a aparecer em buscas locais.
   ========================================================= -->
   <meta name="geo.region" content="BR-SP" />
   <meta name="geo.placename" content="São Paulo" />
@@ -88,15 +71,12 @@
 
   <!-- =========================================================
        FAVICON
-       Ícone que aparece na aba do navegador.
   ========================================================= -->
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
 
   <!-- =========================================================
        GOOGLE ANALYTICS 4 (GA4)
-       Coleta dados de visitas, origem do tráfego e comportamento.
-       ⚠️ Não remover. O ID "G-GLKDNMKSP0" é único da Pietra.
   ========================================================= -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLKDNMKSP0"></script>
   <script>
@@ -108,7 +88,6 @@
 
   <!-- =========================================================
        FONTES — Google Fonts
-       preconnect acelera o carregamento das fontes.
   ========================================================= -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -128,12 +107,10 @@
   <!-- =========================================================
        CSS PRÓPRIO
   ========================================================= -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <!-- =========================================================
        SCHEMA.ORG — DADOS ESTRUTURADOS (JSON-LD)
-       Avisa ao Google que este é um negócio local de corretagem de planos de saúde.
-       Permite rich snippets (telefone, avaliação, serviços).
   ========================================================= -->
   <script type="application/ld+json">
   {
@@ -141,7 +118,7 @@
     "@type": "InsuranceAgency",
     "name": "Pietra Castello Brasolin — Corretora de Planos de Saúde",
     "alternateName": "Pietra Brasolin Planos de Saúde",
-    "description": "Corretora de planos de saúde em São Paulo. Planos individuais, familiares e empresariais com Hapvida, NotreDame, Amil, SulAmérica, Bradesco e Unimed.",
+    "description": "Corretora de planos de saúde em São Paulo. Planos individuais, familiares e empresariais com Bradesco, SulAmérica, Amil, NotreDame, Hapvida, Unimed, Omint, Care Plus, Porto Saúde e mais.",
     "url": "https://www.pietrabrasolin.com.br/",
     "logo": "https://www.pietrabrasolin.com.br/favicon.png",
     "image": "https://www.pietrabrasolin.com.br/pietra.jpg",
@@ -165,7 +142,7 @@
     },
     "sameAs": [
       "https://www.instagram.com/pietrabrasolin",
-      "https://www.tiktok.com/@pietrabrasolin"
+      "https://www.tiktok.com/@pietrabrasolincorretora"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -189,7 +166,6 @@
 
   <!-- =========================================================
        SCHEMA.ORG — FAQ (perguntas frequentes)
-       Pode gerar destaque no Google com perguntas e respostas.
   ========================================================= -->
   <script type="application/ld+json">
   {
@@ -198,26 +174,98 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Quanto custa um plano de saúde em São Paulo?",
+        "name": "Quanto custa um plano de saúde?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O valor varia conforme a operadora, faixa etária, tipo de cobertura e tipo de plano (individual, familiar ou empresarial). Como corretora, faço uma cotação personalizada e gratuita para você."
+          "text": "O valor varia conforme a operadora, a faixa etária, o tipo de cobertura e o tipo de plano (individual, familiar ou empresarial). Como corretora, faço uma cotação personalizada e gratuita para você, comparando as melhores opções do mercado."
         }
       },
       {
         "@type": "Question",
-        "name": "Vale a pena contratar plano de saúde com uma corretora?",
+        "name": "Como funciona o preço do plano de saúde por idade?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. A corretora compara as principais operadoras do mercado, encontra o melhor custo-benefício e oferece suporte durante toda a vigência do contrato, sem custo adicional para o cliente."
+          "text": "Os planos de saúde possuem faixas etárias definidas pela ANS. O valor aumenta conforme a idade do beneficiário, com reajustes em faixas específicas (0-18, 19-23, 24-28, 29-33, 34-38, 39-43, 44-48, 49-53, 54-58 e 59+)."
         }
       },
       {
         "@type": "Question",
-        "name": "Quais operadoras de planos de saúde vocês trabalham?",
+        "name": "Qual a diferença entre plano individual, familiar e empresarial?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trabalhamos com Hapvida, NotreDame Intermédica, Amil, Bradesco Saúde, SulAmérica, Unimed e outras operadoras de destaque no mercado brasileiro."
+          "text": "O plano individual é contratado por uma pessoa. O familiar cobre o titular e seus dependentes. O empresarial é contratado via CNPJ e costuma ter preços mais acessíveis, mas exige vínculo empregatício ou ser sócio da empresa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "MEI pode contratar plano de saúde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! O MEI pode contratar planos empresariais a partir de 2 vidas (titular + 1 dependente). É uma das formas mais econômicas de ter um plano de saúde com boa cobertura."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem tem CNPJ pode contratar plano para a família?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Empresários, sócios e MEIs podem incluir familiares como dependentes no plano empresarial, desde que respeitem as regras da operadora (grau de parentesco e número mínimo de vidas)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como comparar planos de saúde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É importante comparar: rede credenciada (hospitais e laboratórios), tipo de acomodação (enfermaria ou apartamento), abrangência (regional ou nacional), coparticipação, reembolso e valor mensal. Como corretora, faço essa comparação para você."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é coparticipação?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É quando você paga uma parte do valor de consultas e exames sempre que utiliza o plano. Em troca, a mensalidade costuma ser mais barata. Ideal para quem usa pouco o plano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é rede credenciada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É o conjunto de hospitais, clínicas, laboratórios e médicos conveniados com a operadora. Antes de contratar, é essencial verificar se os hospitais que você quer usar fazem parte da rede."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Existe carência?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, planos novos geralmente têm carência para consultas, exames, internações e parto. Em alguns casos, é possível reduzir ou isentar a carência com promoções da operadora ou portabilidade de outro plano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso incluir dependentes no plano?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Cônjuge, filhos, enteados e, em alguns casos, pais podem ser incluídos como dependentes, desde que respeitadas as regras da operadora e do tipo de plano contratado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quantas pessoas são necessárias para contratar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do tipo de plano. Planos individuais não exigem mínimo. Planos empresariais geralmente exigem a partir de 2 vidas (titular + 1 dependente), mas algumas operadoras aceitam MEI com apenas 1 vida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A cotação tem algum custo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não! A cotação é 100% gratuita e sem compromisso. Como corretora, sou remunerada pela operadora quando você contrata, então você não paga nada a mais por isso."
         }
       }
     ]
@@ -229,8 +277,6 @@
 
   <!-- =========================================================
        HEADER / NAVBAR
-       - Navbar fixa no topo, com efeito ao rolar (JS).
-       - Botão hambúrguer no mobile.
   ========================================================= -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
@@ -248,6 +294,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#planos">Planos</a>
         <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
         <a href="#contato" class="btn-nav">Fale Conosco</a>
       </nav>
 
@@ -258,9 +305,7 @@
   </header>
 
   <!-- =========================================================
-       HERO — Seção principal
-       H1 com palavra-chave principal ("plano de saúde ideal em São Paulo").
-       Imagem da Pietra + cards flutuantes + contadores animados.
+       HERO
   ========================================================= -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
@@ -268,7 +313,6 @@
       <div class="hero-text">
         <span class="badge reveal" data-anim="fade-up">✨ Cuidando da sua saúde com excelência</span>
 
-        <!-- H1 — O título mais importante da página (SEO) -->
         <h1 class="reveal" data-anim="fade-up" data-delay="100">
           Encontre o <span>plano de saúde ideal</span> em São Paulo
         </h1>
@@ -304,20 +348,21 @@
       <div class="hero-image reveal" data-anim="zoom-in" data-delay="200">
         <div class="floating-card card-1">
           <i class="fa-solid fa-heart-pulse"></i>
-          <div>
+        <!--<div>
             <strong>500</strong>
             <span>Vidas cuidadas</span>
           </div>
         </div>
+        
         <div class="floating-card card-2">
           <i class="fa-solid fa-shield-heart"></i>
+          -->  
           <div>
             <strong>100%</strong>
             <span>Confiança</span>
           </div>
         </div>
         <div class="hero-circle">
-          <!-- 📸 Foto da Pietra no círculo do hero (alt com palavras-chave) -->
           <img src="pietra-hero.jpg"
                alt="Pietra Castello Brasolin, corretora de planos de saúde em São Paulo"
                fetchpriority="high" />
@@ -331,15 +376,13 @@
   </section>
 
   <!-- =========================================================
-       SOBRE — Informações sobre a Pietra
-       H2 inclui "Corretora de planos de saúde" + "SP"
+       SOBRE
   ========================================================= -->
   <section class="section sobre" id="sobre">
     <div class="container sobre-grid">
       <div class="sobre-image reveal" data-anim="fade-right">
         <div class="image-frame">
           <div class="image-placeholder">
-            <!-- 📸 Foto da Pietra na seção Sobre -->
             <img src="pietra.jpg"
                  alt="Pietra Castello Brasolin, especialista em planos de saúde individuais, familiares e empresariais"
                  loading="lazy" />
@@ -390,8 +433,7 @@
   </section>
 
   <!-- =========================================================
-       SERVIÇOS — Planos oferecidos
-       Cada H3 tem o nome do tipo de plano (bom para SEO)
+       SERVIÇOS
   ========================================================= -->
   <section class="section servicos" id="servicos">
     <div class="container">
@@ -429,9 +471,9 @@
         </div>
 
         <div class="servico-card reveal" data-anim="fade-up">
-          <div class="icon-box"><i class="fa-solid fa-baby"></i></div>
-          <h3>Plano Materno Infantil</h3>
-          <p>Cobertura especial para gestantes e cuidados completos com o bebê.</p>
+          <div class="icon-box"><i class="fa-solid fa-landmark"></i></div>
+          <h3>Plano de saúde por entidade de classe</h3>
+          <p>Vinculada a sua profissão.</p>
         </div>
 
         <div class="servico-card reveal" data-anim="fade-up">
@@ -444,8 +486,7 @@
   </section>
 
   <!-- =========================================================
-       OPERADORAS PARCEIRAS + PLANOS
-       H2 inclui "Operadoras de planos de saúde" (termo muito buscado)
+       OPERADORAS + PLANOS
   ========================================================= -->
   <section class="section operadoras" id="planos">
     <div class="container">
@@ -453,67 +494,127 @@
         <span class="section-tag reveal" data-anim="fade-up">Operadoras parceiras</span>
         <h2 class="reveal" data-anim="fade-up" data-delay="100">Operadoras de planos de saúde parceiras</h2>
         <p class="reveal" data-anim="fade-up" data-delay="200">
-          As principais operadoras de São Paulo e do Brasil
+          As principais operadoras do Brasil, com cobertura nacional e regional
         </p>
       </div>
 
       <div class="operadoras-grid">
-        <!-- Hapvida -->
-        <div class="operadora-card reveal" data-anim="fade-up">
-          <div class="operadora-logo hapvida">
-            <!-- Substitua por: <img src="img/hapvida.png" alt="Logo Hapvida — plano de saúde"> -->
-            <span>Hapvida</span>
-          </div>
-          <p>Saúde acessível</p>
-        </div>
 
-        <!-- NotreDame Intermédica -->
-        <div class="operadora-card reveal" data-anim="fade-up">
-          <div class="operadora-logo notredame">
-            <!-- Substitua por: <img src="img/notredame.png" alt="Logo NotreDame Intermédica — plano de saúde"> -->
-            <span>NotreDame</span>
-          </div>
-          <p>Intermédica</p>
-        </div>
-
-        <!-- Amil -->
-        <div class="operadora-card reveal" data-anim="fade-up">
-          <div class="operadora-logo amil">
-            <!-- Substitua por: <img src="img/amil.png" alt="Logo Amil — plano de saúde"> -->
-            <span>Amil</span>
-          </div>
-          <p>Cuidado completo</p>
-        </div>
-
-        <!-- Bradesco Saúde -->
+        <!-- 1. Bradesco Saúde -->
         <div class="operadora-card reveal" data-anim="fade-up">
           <div class="operadora-logo bradesco">
-            <!-- Substitua por: <img src="img/bradesco.png" alt="Logo Bradesco Saúde — plano de saúde"> -->
-            <span>Bradesco</span>
+            <img src="logos/logobradesco.png" alt="Logo Bradesco Saúde — plano de saúde">
           </div>
-          <p>Saúde</p>
+          <p>Bradesco Saúde</p>
         </div>
 
-        <!-- SulAmérica -->
+        <!-- 2. SulAmérica -->
         <div class="operadora-card reveal" data-anim="fade-up">
           <div class="operadora-logo sulamerica">
-            <!-- Substitua por: <img src="img/sulamerica.png" alt="Logo SulAmérica — plano de saúde"> -->
-            <span>SulAmérica</span>
+            <img src="logos/logosulamerica.png" alt="Logo SulAmérica — plano de saúde">
           </div>
-          <p>Saúde e odonto</p>
+          <p>SulAmérica</p>
         </div>
 
-        <!-- Unimed -->
+        <!-- 3. Amil -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo amil">
+            <img src="logos/logoamil.png" alt="Logo Amil — plano de saúde">
+          </div>
+          <p>Amil</p>
+        </div>
+
+        <!-- 4. NotreDame Intermédica -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo notredame">
+            <img src="logos/logonotredame.png" alt="Logo NotreDame Intermédica — plano de saúde">
+          </div>
+          <p>NotreDame Intermédica</p>
+        </div>
+
+        <!-- 5. Omint -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo omint">
+            <img src="logos/logoomint.png" alt="Logo Omint — plano de saúde">
+          </div>
+          <p>Omint</p>
+        </div>
+
+        <!-- 6. Care Plus -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo careplus">
+            <img src="logos/logocareplus.png" alt="Logo Care Plus — plano de saúde">
+          </div>
+          <p>Care Plus</p>
+        </div>
+
+        <!-- 7. Porto Saúde -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo porto">
+            <img src="logos/logoporto.png" alt="Logo Porto Saúde — plano de saúde">
+          </div>
+          <p>Porto Saúde</p>
+        </div>
+
+        <!-- 8. Hapvida -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo hapvida">
+            <img src="logos/logohapvida.png" alt="Logo Hapvida — plano de saúde">
+          </div>
+          <p>HapVida</p>
+        </div>
+
+        <!-- 9. Unimed -->
         <div class="operadora-card reveal" data-anim="fade-up">
           <div class="operadora-logo unimed">
-            <!-- Substitua por: <img src="img/unimed.png" alt="Logo Unimed — plano de saúde"> -->
-            <span>Unimed</span>
+            <img src="logos/logounimed.png" alt="Logo Unimed — plano de saúde">
           </div>
-          <p>Rede nacional</p>
+          <p>Unimed</p>
         </div>
+
+        <!-- 10. São Cristóvão Saúde -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo saocristovao">
+            <img src="logos/logosaocristovao.png" alt="Logo São Cristóvão Saúde — plano de saúde">
+          </div>
+          <p>São Cristóvão</p>
+        </div>
+
+        <!-- 11. Prevent Senior -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo preventsenior">
+            <img src="logos/logopreventsenior.png" alt="Logo Prevent Senior — plano de saúde">
+          </div>
+          <p>Prevent Senior</p>
+        </div>
+
+        <!-- 12. Alice Saúde -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo alice">
+            <img src="logos/logoalice.png" alt="Logo Alice Saúde — plano de saúde">
+          </div>
+          <p>Alice</p>
+        </div>
+
+        <!-- 13. Sami Saúde -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo sami">
+            <img src="logos/logosami.png" alt="Logo Sami Saúde — plano de saúde">
+          </div>
+          <p>Sami Saúde</p>
+        </div>
+
+        <!-- 14. CUIDAR.ME -->
+        <div class="operadora-card reveal" data-anim="fade-up">
+          <div class="operadora-logo cuidarme">
+            <img src="logos/logocuidarme.png" alt="Logo CUIDAR.ME — plano de saúde">
+          </div>
+          <p>Cuidar.me Saúde</p>
+        </div>
+
       </div>
 
-      <!-- Bloco de planos (Básico / Intermediário / Premium) -->
+      <!-- Planos Básico / Intermediário / Premium (desativado)
       <div class="planos-wrap">
         <div class="planos-grid">
           <div class="plano-card reveal" data-anim="fade-up">
@@ -568,12 +669,12 @@
           </div>
         </div>
       </div>
+      -->
     </div>
   </section>
 
   <!-- =========================================================
-       DEPOIMENTOS — Prova social
-       Ajuda na conversão e no SEO (conteúdo único e relevante).
+       DEPOIMENTOS
   ========================================================= -->
   <section class="section depoimentos" id="depoimentos">
     <div class="container">
@@ -629,8 +730,158 @@
   </section>
 
   <!-- =========================================================
-       CTA — Chamada para ação intermediária
-       Reforça o convite à cotação antes do contato final.
+       FAQ — Perguntas Frequentes (accordion)
+  ========================================================= -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal" data-anim="fade-up">Dúvidas frequentes</span>
+        <h2 class="reveal" data-anim="fade-up" data-delay="100">
+          Dúvidas frequentes sobre <span class="faq-highlight">plano de saúde</span>
+        </h2>
+        <p class="reveal" data-anim="fade-up" data-delay="200">
+          Reunimos as perguntas mais comuns para te ajudar a decidir com segurança
+        </p>
+      </div>
+
+      <div class="faq-list reveal" data-anim="fade-up">
+        <!-- 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Quanto custa um plano de saúde?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O valor varia conforme a operadora, a faixa etária, o tipo de cobertura e o tipo de plano (individual, familiar ou empresarial). Como corretora, faço uma cotação personalizada e gratuita para você, comparando as melhores opções do mercado.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Como funciona o preço do plano de saúde por idade?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Os planos de saúde possuem faixas etárias definidas pela ANS. O valor aumenta conforme a idade do beneficiário, com reajustes em faixas específicas (0-18, 19-23, 24-28, 29-33, 34-38, 39-43, 44-48, 49-53, 54-58 e 59+).</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Qual a diferença entre plano individual, familiar e empresarial?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O plano individual é contratado por uma pessoa. O familiar cobre o titular e seus dependentes. O empresarial é contratado via CNPJ e costuma ter preços mais acessíveis, mas exige vínculo empregatício ou ser sócio da empresa.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>MEI pode contratar plano de saúde?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! O MEI pode contratar planos empresariais a partir de 2 vidas (titular + 1 dependente). É uma das formas mais econômicas de ter um plano de saúde com boa cobertura.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Quem tem CNPJ pode contratar plano para a família?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Empresários, sócios e MEIs podem incluir familiares como dependentes no plano empresarial, desde que respeitem as regras da operadora (grau de parentesco e número mínimo de vidas).</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Como comparar planos de saúde?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>É importante comparar: rede credenciada (hospitais e laboratórios), tipo de acomodação (enfermaria ou apartamento), abrangência (regional ou nacional), coparticipação, reembolso e valor mensal. Como corretora, faço essa comparação para você.</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>O que é coparticipação?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>É quando você paga uma parte do valor de consultas e exames sempre que utiliza o plano. Em troca, a mensalidade costuma ser mais barata. Ideal para quem usa pouco o plano.</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>O que é rede credenciada?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>É o conjunto de hospitais, clínicas, laboratórios e médicos conveniados com a operadora. Antes de contratar, é essencial verificar se os hospitais que você quer usar fazem parte da rede.</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Existe carência?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, planos novos geralmente têm carência para consultas, exames, internações e parto. Em alguns casos, é possível reduzir ou isentar a carência com promoções da operadora ou portabilidade de outro plano.</p>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Posso incluir dependentes no plano?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Cônjuge, filhos, enteados e, em alguns casos, pais podem ser incluídos como dependentes, desde que respeitadas as regras da operadora e do tipo de plano contratado.</p>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Quantas pessoas são necessárias para contratar?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Depende do tipo de plano. Planos individuais não exigem mínimo. Planos empresariais geralmente exigem a partir de 2 vidas (titular + 1 dependente), mas algumas operadoras aceitam MEI com apenas 1 vida.</p>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>A cotação tem algum custo?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Não! A cotação é 100% gratuita e sem compromisso. Como corretora, sou remunerada pela operadora quando você contrata, então você não paga nada a mais por isso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA
   ========================================================= -->
   <section class="cta-section">
     <div class="container cta-content">
@@ -645,8 +896,7 @@
   </section>
 
   <!-- =========================================================
-       CONTATO — Cards com WhatsApp, Instagram e TikTok
-       H2 com palavra-chave ("cotação de plano de saúde")
+       CONTATO
   ========================================================= -->
   <section class="section contato" id="contato">
     <div class="container">
@@ -659,7 +909,8 @@
       </div>
 
       <div class="contato-cards">
-        <a href="https://wa.me/5511937786107" target="_blank" rel="noopener"
+        <a href="https://api.whatsapp.com/send?phone=5511937786107&text=Ol%C3%A1%20Pietra%2C%20vim%20a%20partir%20do%20seu%20site%20e%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20gratuita!"
+        target="_blank" rel="noopener"
            class="contato-card reveal" data-anim="fade-up" aria-label="Falar no WhatsApp">
           <div class="contato-card-icon whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
@@ -688,11 +939,28 @@
           <p>Pietra Brasolin - Corretora</p>
           <span class="contato-card-cta">Ver vídeos <i class="fa-solid fa-arrow-right"></i></span>
         </a>
+
+        <!-- ✉️ NOVO CARD DE E-MAIL -->
+                <!-- ✉️ NOVO CARD DE E-MAIL (abre Gmail) -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pbcconsultoriadeseguros@gmail.com"
+           target="_blank"
+           rel="noopener"
+           class="contato-card reveal"
+           data-anim="fade-up"
+           aria-label="Enviar e-mail">
+          <div class="contato-card-icon email">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3>E-mail</h3>
+          <p>pbcconsultoriadeseguros@gmail.com</p>
+          <span class="contato-card-cta">Enviar e-mail <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================       FOOTER — Rodapé com navegação, serviços e contato
+  <!-- =========================================================
+       FOOTER
   ========================================================= -->
   <footer class="footer">
     <div class="container footer-grid">
@@ -712,7 +980,8 @@
           <a href="https://www.tiktok.com/@pietrabrasolincorretora?lang=pt-BR" target="_blank" rel="noopener" aria-label="TikTok">
             <i class="fa-brands fa-tiktok"></i>
           </a>
-          <a href="https://wa.me/5511937786107" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="https://api.whatsapp.com/send?phone=5511937786107&text=Ol%C3%A1%20Pietra%2C%20vim%20a%20partir%20do%20seu%20site%20e%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20gratuita!"
+          target="_blank" rel="noopener" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
@@ -725,6 +994,7 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#planos">Planos</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
 
@@ -744,6 +1014,7 @@
           <li><i class="fa-brands fa-whatsapp"></i> (11) 93778-6107</li>
           <li><i class="fa-brands fa-instagram"></i> @pietrabrasolin</li>
           <li><i class="fa-brands fa-tiktok"></i> pietrabrasolincorretora</li>
+          <li><i class="fa-solid fa-envelope"></i> pcbconsultoriadeseguros@gmail.com</li>
         </ul>
       </div>
     </div>
@@ -755,11 +1026,10 @@
   </footer>
 
   <!-- =========================================================
-       BOTÕES FLUTUANTES — WhatsApp, Instagram e TikTok
-       Sempre visíveis no canto inferior direito.
+       BOTÕES FLUTUANTES
   ========================================================= -->
   <div class="social-float" aria-label="Redes sociais">
-    <a href="https://wa.me/5511937786107"
+    <a href="https://api.whatsapp.com/send?phone=5511937786107&text=Ol%C3%A1%20Pietra%2C%20vim%20a%20partir%20do%20seu%20site%20e%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20gratuita!"
        target="_blank"
        rel="noopener"
        class="float-btn whatsapp"
@@ -793,6 +1063,6 @@
   </button>
 
   <!-- JavaScript do site -->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

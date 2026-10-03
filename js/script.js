@@ -9,15 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
   --------------------------------------------------- */
   const navbar = document.getElementById("navbar");
 
-  const handleNavbar = () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  };
-  window.addEventListener("scroll", handleNavbar);
-  handleNavbar();
+  if (navbar) {
+    const handleNavbar = () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleNavbar);
+    handleNavbar();
+  }
 
 
   /* ---------------------------------------------------
@@ -26,42 +28,74 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    const icon = menuToggle.querySelector("i");
-    if (navLinks.classList.contains("open")) {
-      icon.classList.remove("fa-bars");
-      icon.classList.add("fa-xmark");
-    } else {
-      icon.classList.remove("fa-xmark");
-      icon.classList.add("fa-bars");
-    }
-  });
-
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
       const icon = menuToggle.querySelector("i");
-      icon.classList.remove("fa-xmark");
-      icon.classList.add("fa-bars");
+      if (navLinks.classList.contains("open")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        const icon = menuToggle.querySelector("i");
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      });
+    });
+  }
+
+
+  /* ---------------------------------------------------
+     3. FAQ — Accordion (abre/fecha)
+  --------------------------------------------------- */
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    if (!question) return;
+
+    question.addEventListener("click", () => {
+      const isOpen = item.classList.contains("active");
+
+      // Fecha todos os outros
+      faqItems.forEach((other) => {
+        other.classList.remove("active");
+        const otherQuestion = other.querySelector(".faq-question");
+        if (otherQuestion) otherQuestion.setAttribute("aria-expanded", "false");
+      });
+
+      // Abre o clicado (se não estava aberto)
+      if (!isOpen) {
+        item.classList.add("active");
+        question.setAttribute("aria-expanded", "true");
+      }
     });
   });
 
 
   /* ---------------------------------------------------
-     3. REVEAL ANIMATIONS (scroll) — com delay customizado
+     4. REVEAL ANIMATIONS (scroll) — com delay customizado
   --------------------------------------------------- */
   const reveals = document.querySelectorAll(".reveal");
 
   // Delay automático para cards em grids (escalonado)
-  document.querySelectorAll(".servicos-grid, .planos-grid, .depoimentos-grid").forEach((grid) => {
-    [...grid.children].forEach((child, i) => {
-      // Aplica apenas se não tiver delay manual definido
-      if (!child.dataset.delay) {
-        child.dataset.delay = i * 120;
-      }
+  document
+    .querySelectorAll(".servicos-grid, .depoimentos-grid, .operadoras-grid, .contato-cards")
+    .forEach((grid) => {
+      [...grid.children].forEach((child, i) => {
+        if (!child.dataset.delay) {
+          child.dataset.delay = i * 120;
+        }
+      });
     });
-  });
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -85,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ---------------------------------------------------
-     4. CONTADOR ANIMADO (hero stats)
+     5. CONTADOR ANIMADO (hero stats)
   --------------------------------------------------- */
   const counters = document.querySelectorAll("[data-count]");
 
@@ -121,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ---------------------------------------------------
-     5. NAVEGAÇÃO ATIVA
+     6. NAVEGAÇÃO ATIVA
   --------------------------------------------------- */
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".nav-links a:not(.btn-nav)");
@@ -147,57 +181,44 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveLink();
 
 
-  /* ---------------------------------------------------
-     6. BOTÃO VOLTAR AO TOPO
+   /* ---------------------------------------------------
+     7. BOTÃO VOLTAR AO TOPO — com animação suave
   --------------------------------------------------- */
   const backTop = document.getElementById("backTop");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) backTop.classList.add("visible");
-    else backTop.classList.remove("visible");
-  });
+  if (backTop) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) backTop.classList.add("visible");
+      else backTop.classList.remove("visible");
+    });
 
-  backTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+    backTop.addEventListener("click", () => {
+      const startPosition = window.scrollY;
+      const duration = 900;        // duração em ms (900 = 0.9s)
+      const startTime = performance.now();
 
+      // Easing: easeInOutCubic (suave no começo, acelera e desacelera no fim)
+      const easeInOutCubic = (t) => {
+        return t < 0.5
+          ? 4 * t * t * t
+          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      };
 
-  /* ---------------------------------------------------
-     7. FORMULÁRIO DE CONTATO
-  --------------------------------------------------- */
-  const form = document.getElementById("formContato");
-  const formMsg = document.getElementById("formMsg");
+      const animateScroll = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeInOutCubic(progress);
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+        window.scrollTo(0, startPosition * (1 - eased));
 
-    const nome = form.nome.value.trim();
-    const email = form.email.value.trim();
-    const telefone = form.telefone.value.trim();
-    const tipo = form.tipo.value;
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
 
-    if (!nome || !email || !telefone || !tipo) {
-      formMsg.style.color = "#e74c3c";
-      formMsg.textContent = "Por favor, preencha todos os campos obrigatórios.";
-      return;
-    }
-
-    const btn = form.querySelector("button[type='submit']");
-    const originalHTML = btn.innerHTML;
-
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
-
-    setTimeout(() => {
-      formMsg.style.color = "#0e7c86";
-      formMsg.textContent = `Obrigada, ${nome.split(" ")[0]}! Recebemos sua solicitação. Entraremos em contato em breve. 🩺`;
-      form.reset();
-
-      btn.disabled = false;
-      btn.innerHTML = originalHTML;
-    }, 1400);
-  });
-
+      requestAnimationFrame(animateScroll);
+    });
+  }
 
   /* ---------------------------------------------------
      8. SCROLL SUAVE COM OFFSET
@@ -230,29 +251,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-
-  /* ---------------------------------------------------
-     10. EFEITO DE DIGITAÇÃO SUAVE NO TÍTULO (opcional)
-  --------------------------------------------------- */
-  // Caso queira um efeito de máquina de escrever no badge,
-  // basta descomentar o bloco abaixo.
-
-  /*
-  const badge = document.querySelector(".badge");
-  if (badge) {
-    const text = badge.textContent.trim();
-    badge.textContent = "";
-    let i = 0;
-    const typing = () => {
-      if (i < text.length) {
-        badge.textContent += text[i];
-        i++;
-        setTimeout(typing, 40);
-      }
-    };
-    setTimeout(typing, 600);
-  }
-  */
 
 });
